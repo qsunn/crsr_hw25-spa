@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from "react-router-dom";
+
+import Nav from "./components/Nav";
+import Main from "./pages/Main";
+import Feed from "./pages/Feed";
+import Photos from "./pages/Photos";
+import Contacts from "./pages/Contacts";
+import ContactInfo from "./pages/ContactInfo";
+import { contacts } from "./data/contacts";
 
 function App() {
+  const baseUrl = "/crsr_hw25-spa";
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative mx-auto min-h-screen bg-black">
+      <Nav />
+      <Routes>
+        <Route path={`${baseUrl}/`} element={<Main />} />
+        <Route path={`${baseUrl}/feed`} element={<Feed />} />
+        <Route path={`${baseUrl}/photos`} element={<Photos />} />
+        <Route path={`${baseUrl}/contacts`} element={<Contacts />} />
+        {contacts.map((contact, i) => <Route path={`${baseUrl}/contacts/id=${i}`} element={<ContactInfo contact={contact} />} key={i}/>)}
+      </Routes>
     </div>
   );
 }
