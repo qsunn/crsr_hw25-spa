@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/crsr_hw25-spa/static/css/main.55fabd1e.css",
+    "main.css": "/crsr_hw25-spa/static/css/main.419542be.css",
     "main.js": "/crsr_hw25-spa/static/js/main.084ce60a.js",
     "index.html": "/crsr_hw25-spa/index.html",
-    "main.55fabd1e.css.map": "/crsr_hw25-spa/static/css/main.55fabd1e.css.map",
+    "main.419542be.css.map": "/crsr_hw25-spa/static/css/main.419542be.css.map",
     "main.084ce60a.js.map": "/crsr_hw25-spa/static/js/main.084ce60a.js.map"
   },
   "entrypoints": [
-    "static/css/main.55fabd1e.css",
+    "static/css/main.419542be.css",
     "static/js/main.084ce60a.js"
   ]
 }
